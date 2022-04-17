@@ -1,14 +1,7 @@
 import Form from "./components/Form/Form";
-import GlobalStyle from "./GlobalStyles";
-
 
 const App = () => {
-  return (
-    <>
-      <GlobalStyle />
-      <Form />
-    </>
-  );
+  return <Form />;
 };
 
 export default App;
