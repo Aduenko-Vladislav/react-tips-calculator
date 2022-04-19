@@ -12,7 +12,7 @@ const Form = () => {
 
   const totalBill = () => {
     if (bill && person) {
-      setTotal((bill / person) * tips + bill / person);
+      setTotal((bill / person) * +tips + bill / person);
     }
     return;
   };
