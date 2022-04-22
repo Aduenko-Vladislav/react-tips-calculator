@@ -1,15 +1,12 @@
-import { StyledButton } from "./styled";
+import { StyledButton } from "./styles";
 interface IButton {
-  person: number;
-  bill: number;
-  tips: number;
-  total: number;
+  isDisabled: boolean;
 }
 
-const Button = ({totalBill}:any) => {
+const Button = ({ isDisabled }: IButton) => {
   return (
-    <StyledButton type="button" onClick={() => totalBill()}>
-      hhhoooo 🍻
+    <StyledButton type="submit" disabled={isDisabled}>
+      Ohhhoooo 🍻
     </StyledButton>
   );
 };

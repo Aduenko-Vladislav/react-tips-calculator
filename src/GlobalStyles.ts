@@ -1,5 +1,5 @@
 import { createGlobalStyle } from "styled-components";
-import circles from "./assets/circle.svg";
+import circles from "./assets/circles.svg";
 
 const GlobalStyle = createGlobalStyle`
 

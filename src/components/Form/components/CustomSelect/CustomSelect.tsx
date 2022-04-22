@@ -1,4 +1,4 @@
-import Select from "react-select";
+import Select, { StylesConfig } from "react-select";
 import { IOption } from "../../../../types";
 
 const options: IOption[] = [
@@ -6,40 +6,53 @@ const options: IOption[] = [
   { value: 0.15, label: "15%" },
   { value: 0.2, label: "20%" },
 ];
+interface ICustomSelect {
+  name: string;
+  handleCustomSelect: (option: IOption | null) => void;
+  value: IOption;
+}
 
-const customStyles = {
-  control: (provided: any, state: any) => ({
-    ...provided,
-    width: state.selectProps.width,
-    color: state.selectProps.menuColor,
-    padding: 20,
-    borderRadius: 30,
-    border: "none",
-  }),
+export const CustomSelect = ({
+  handleCustomSelect,
+  value,
+  name,
+}: ICustomSelect) => {
+  const customStyles: StylesConfig<IOption> = {
+    control: (provided) => ({
+      ...provided,
+      padding: 20,
+      borderRadius: 30,
+      border: "none",
+    }),
 
-  singleValue: (provided: any) => ({
-    ...provided,
-    fontSize: 18,
-    textAlign: "center",
-    color: "rgba(117, 108, 108, 1)",
-  }),
+    singleValue: (provided) => ({
+      ...provided,
+      fontSize: 18,
+      textAlign: "center",
+      color: "rgba(117, 108, 108, 1)",
+    }),
 
-  indicatorSeparator: (provided: any) => ({
-    ...provided,
-    display: "none",
-  }),
-  indicatorContainer:(provided:any) =>({
-    ...provided,
-    color: "rgba(117, 108, 108, 1)"
-  }),
+    indicatorSeparator: (provided) => ({
+      ...provided,
+      display: "none",
+    }),
+
+    indicatorsContainer: (provided) => ({
+      ...provided,
+      color: "rgba(117, 108, 108, 1)",
+    }),
+  };
+
+  return (
+    <Select
+      name={name}
+      options={options}
+      onChange={handleCustomSelect}
+      styles={customStyles}
+      value={value}
+      defaultValue={options[0]}
+      isMulti={false}
+    />
+  );
 };
-
-const CustomSelect = ({ setTips }: any) => (
-  <Select
-    defaultValue={options[0]}
-    options={options}
-    onChange={(item) => setTips(item?.value)}
-    styles={customStyles}
-  />
-);
 export default CustomSelect;

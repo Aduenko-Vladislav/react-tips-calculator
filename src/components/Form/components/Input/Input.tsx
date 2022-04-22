@@ -1,21 +1,31 @@
+import { ChangeEvent } from "react";
 import { StyledInput } from "./styles";
 
 interface IInput {
+  name: string;
   placeholder: string;
   min: string;
   type: string;
-  setValue: void;
-  inputValue: string;
+  value: string | number;
+  handleInputChange: (e: ChangeEvent<HTMLInputElement>) => void;
 }
 
-const Input = ({ placeholder, min, type, setValue, inputValue }:any) => {
+const Input = ({
+  name,
+  placeholder,
+  min,
+  type,
+  value,
+  handleInputChange,
+}: IInput) => {
   return (
     <StyledInput
+      name={name}
       placeholder={placeholder}
       min={min}
       type={type}
-      value={inputValue}
-      onChange={(event) => setValue(event.target.value)}
+      value={value}
+      onChange={handleInputChange}
     />
   );
 };

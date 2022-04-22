@@ -2,10 +2,12 @@ import styled from "styled-components";
 
 const StyledForm = styled.div`
   display: grid;
-  justify-items: center;
-  grid-gap: 45px;
+  justify-content: center;
+  grid-row-gap: 45px;
 
-  margin-top: 207px;
+  max-width: 456px;
+  width: 100%;
+  margin: 207px auto;
 
   @media (max-width: 744px) {
     margin-top: 236px;
@@ -17,6 +19,8 @@ const StyledForm = styled.div`
 `;
 
 const Title = styled.h2`
+  margin: 0 auto;
+
   font-size: 40px;
   line-height: 58px;
 
@@ -27,6 +31,8 @@ const Title = styled.h2`
 `;
 
 const Subtitle = styled.p`
+  margin: 0 auto;
+
   font-size: 32px;
   line-height: 38px;
 
@@ -40,8 +46,6 @@ const Subtitle = styled.p`
 const InputGroup = styled.div`
   display: grid;
   grid-gap: 33px;
-
-  padding: 0 15px;
 
   @media (max-width: 744px) {
     grid-gap: 17px;
