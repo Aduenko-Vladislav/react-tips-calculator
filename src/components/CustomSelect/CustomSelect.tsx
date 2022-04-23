@@ -9,7 +9,7 @@ const options: IOption[] = [
 interface ICustomSelect {
   name: string;
   handleCustomSelect: (option: IOption | null) => void;
-  value: number
+  value: number;
 }
 
 export const CustomSelect = ({
@@ -28,7 +28,7 @@ export const CustomSelect = ({
     }),
     valueContainer: (provided) => ({
       ...provided,
-      padding: "0"
+      padding: "0",
     }),
 
     singleValue: (provided) => ({
@@ -46,7 +46,7 @@ export const CustomSelect = ({
     indicatorsContainer: (provided) => ({
       ...provided,
       color: "rgba(117, 108, 108, 1)",
-      padding: "0"
+      padding: "0",
     }),
   };
   return (
