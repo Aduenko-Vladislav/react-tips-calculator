@@ -34,7 +34,7 @@ const Form = () => {
 
   const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    const totalBill = +bill / +persons + tips + +bill / +persons;
+    const totalBill = tips * (+bill / +persons) + +bill / +persons;
     if (bill && persons) {
       setCount({
         ...count,
