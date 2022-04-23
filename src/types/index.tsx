@@ -1,11 +1,12 @@
-export interface IOption {
-  value: number
+interface IOption {
+  value: number;
   label: string;
 }
-
-export interface ICount {
+interface ICount {
   bill: string | number;
   persons: string | number;
   tips: IOption["value"];
   total: number;
 }
+
+export type { IOption, ICount };

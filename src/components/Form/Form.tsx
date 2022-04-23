@@ -1,8 +1,8 @@
 import { ChangeEvent, FormEvent, useEffect, useState } from "react";
 import { ICount, IOption } from "../../types";
-import Button from "./components/Button/Button";
-import CustomSelect from "./components/CustomSelect/CustomSelect";
-import Input from "./components/Input/Input";
+import Button from "../Button/Button";
+import CustomSelect from "../CustomSelect/CustomSelect";
+import Input from "../Input/Input";
 import { StyledForm, Title, Subtitle, InputGroup, Total } from "./styles";
 
 const Form = () => {

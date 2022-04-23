@@ -1,13 +1,13 @@
 import styled from "styled-components";
 
-const StyledForm = styled.div`
+const StyledForm = styled.form`
   display: grid;
   justify-content: center;
   grid-row-gap: 45px;
 
   max-width: 456px;
   width: 100%;
-  margin: 207px auto;
+  margin: 207px auto 0;
 
   @media (max-width: 744px) {
     margin-top: 236px;

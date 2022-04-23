@@ -5,7 +5,7 @@ interface IButton {
 
 const Button = ({ isDisabled }: IButton) => {
   return (
-    <StyledButton type="submit" disabled={isDisabled}>
+    <StyledButton type="submit" $isDisabled={isDisabled}>
       Ohhhoooo 🍻
     </StyledButton>
   );
