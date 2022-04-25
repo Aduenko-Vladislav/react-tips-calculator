@@ -7,7 +7,7 @@ const StyledForm = styled.form`
 
   max-width: 456px;
   width: 100%;
-  margin: 207px auto 0;
+  margin: 207px auto 150px;
 
   @media (max-width: 744px) {
     margin-top: 236px;
